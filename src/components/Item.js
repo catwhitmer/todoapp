@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
-import { render } from '@testing-library/react';
+
+import Toggle from '../components/Toggle'
 
 
 class Item extends Component {
   
   state = {
-    done: false
+    done: false,
   }
 
   handleClick = () => {
     this.setState({done: !this.state.done })
   }
-  
-  //add item controlled form
-  
+
   render() {
      return (
-      <li onClick = {this.handleClick} className={this.state.done ? "done" : null}>{this.props.desc}</li>
+      <div>
+        <li onClick ={this.handleClick}> {this.state.done ? "done" : null} {this.props.item} </li>
+        <Toggle />
+      </div>
      )
   }
 }

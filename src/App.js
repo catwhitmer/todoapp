@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import ToDo from './components/ToDo';
+import CreateTodo from './components/CreateTodo'
 
 function App() {
   return (

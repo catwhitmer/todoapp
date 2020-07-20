@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from './Item';
+import CreateTodo from './CreateTodo';
 
 class ToDo extends React.Component {
 
@@ -10,7 +11,8 @@ class ToDo extends React.Component {
   render() {
       return (
         <ul>
-          {this.state.items.map(item => <Item desc= {item} />)}
+          {this.state.items.map(item => <Item item= {item} />)}
+          <CreateTodo /> 
         </ul>
       )
   }
