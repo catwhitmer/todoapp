@@ -16,7 +16,7 @@ class Item extends Component {
   render() {
      return (
       <div>
-        <li onClick ={this.handleClick}> {this.state.done ? "done" : null} {this.props.item} </li>
+        <li onClick ={this.handleClick}  className={this.state.done ? "done" : null}> {this.props.item} </li>
         <Toggle />
       </div>
      )
