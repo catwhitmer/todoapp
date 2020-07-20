@@ -1,6 +1,6 @@
 import React from 'react'
 
-class P extends React.Component {
+class Like extends React.Component {
 
     state = {
         count: 0
@@ -19,4 +19,4 @@ class P extends React.Component {
     }
 }
 
-export default P
+export default Like

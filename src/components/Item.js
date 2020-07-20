@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import Toggle from '../components/Toggle'
-import P from '../components/P'
+import Like from './Like'
 
 
 class Item extends Component {
@@ -19,7 +19,7 @@ class Item extends Component {
       <div>
         <li onClick ={this.handleClick}  className={this.state.done ? "done" : null}> {this.props.item} </li>
         <Toggle />
-        <P />
+        <Like/>
       </div>
      )
   }
