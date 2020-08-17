@@ -6,6 +6,10 @@ class CreateTodo extends React.Component {
     todo: ""
   }
 
+  createTodo = () => {
+    
+  }
+
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -14,7 +18,7 @@ class CreateTodo extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.CreateTodo(this.state)
+    this.props.createTodo(this.state)
   }
 
   render() {
