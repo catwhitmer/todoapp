@@ -5,23 +5,22 @@ import CreateTodo from './CreateTodo';
 
 function ToDo() {
 
-  const [ items, setItems ] = useState([]);
+  const [ todos, setItems ] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3001/api/v1/todos')
     .then (resp => resp.json())
     .then ((data) => {
-      setItems(data.items)
+      setItems(data.todos)
     })
   }, [])
 
-
   return (
-    <ul>
+    <div>
       <h2> My To-Dos </h2>
-        
-        <CreateTodo /> 
-    </ul>
+      
+      <CreateTodo /> 
+    </div>
   )
 
 }
