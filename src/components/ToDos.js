@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import Item from './Item';
+//import Item from './Item';
 import CreateTodo from './CreateTodo';
 
 
-function ToDo() {
+function ToDos() {
 
-  const [ todos, setItems ] = useState([]);
+  const [ todos, setTodos ] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:3001/api/v1/todos')
     .then (resp => resp.json())
     .then ((data) => {
-      setItems(data.todos)
+      setTodos(data.todos)
     })
   }, [])
 
   return (
     <div>
       <h2> My To-Dos </h2>
-      
+       
       <CreateTodo /> 
     </div>
   )
 
 }
 
-export default ToDo;
+export default ToDos;

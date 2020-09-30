@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import ToDo from './components/ToDo';
+import ToDos from './components/ToDos';
 
 function App() {
   return (
     <div className="App">
-      <ToDo />
+      <ToDos />
     </div>
   );
 }
