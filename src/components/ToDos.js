@@ -3,26 +3,32 @@ import React, { useState, useEffect } from 'react';
 import CreateTodo from './CreateTodo';
 
 
-function ToDos() {
+class ToDos extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todos: []
+    }
+  }
 
-  const [ todos, setTodos ] = useState([]);
-
-  useEffect(() => {
+  componentDidMount() {
     fetch('http://localhost:3001/api/v1/todos')
-    .then (resp => resp.json())
-    .then ((data) => {
-      setTodos(data.todos)
-    })
-  }, [])
+      .then (resp => resp.json())
+      .then ((data) => {
+        this.setState({
+          todos: data.todos
+        })
+      })
+  }
 
-  return (
-    <div>
-      <h2> My To-Dos </h2>
-       
-      <CreateTodo /> 
-    </div>
-  )
-
+  render() {
+    return (
+      <div>
+        <h1> My To-Dos </h1>
+        <CreateTodo />
+      </div>
+    )
+  }
 }
 
 export default ToDos;
