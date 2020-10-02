@@ -10,15 +10,19 @@ class ToDos extends React.Component {
       todos: []
     }
   }
-
-  componentDidMount() {
-    fetch('http://localhost:3001/api/v1/todos')
+  
+  getTodos() {
+     fetch('http://localhost:3001/api/v1/todos')
       .then (resp => resp.json())
       .then ((data) => {
-        this.setState({
-          todos: data.todos
-        })
+        this.setState({todos: data.todos})
       })
+      .catch(error => console.log(error))
+  }
+
+
+  componentDidMount() {
+   this.getTodos()
   }
 
   render() {
