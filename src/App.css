@@ -21,6 +21,14 @@
 
 .Todos-Container {
   padding: 10px;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  background: lightyellow;
+  float: left;
+  font-size: 20px;
+  text-align: left;
+  color: black;
 }
 
 .done {
