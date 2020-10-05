@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import ToDos from './components/ToDos';
+import TodosContainer from './components/TodosContainer';
 
-function App() {
-  return (
-    <div className="App">
-      <ToDos />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+        <h1> My To-Dos</h1>
+        </div>
+        <TodosContainer />
+      </div>
+    );
+  }
 }
 
 export default App;
