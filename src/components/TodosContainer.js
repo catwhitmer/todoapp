@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import Item from './Item';
+import Todo from './Todo';
 //import CreateTodo from './CreateTodo';
 import axios from 'axios';
 
@@ -27,7 +27,8 @@ class TodosContainer extends Component {
         {this.state.data.map((todo) => {
           return(
             <div className='Todos-Container' key={todo.id}>
-              <li> {todo.notes}</li>
+              <Todo todos={this.state.data}/>
+              <p> {todo.notes} </p>
             </div> 
           )
         })}
