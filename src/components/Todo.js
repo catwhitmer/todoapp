@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import Toggle from './Toggle'
-import Like from './Like'
+//import Toggle from './Toggle'
+//import Like from './Like'
 
 
 class Todo extends Component {
@@ -17,8 +17,7 @@ class Todo extends Component {
   render() {
      return (
       <div>
-        <p onClick ={this.handleClick}  className={this.state.done ? "done" : null}> {this.state.props} </p>
-        <Toggle />
+        <p onClick ={this.handleClick}  className={this.state.done ? "done" : null}> {this.state.data} </p>      
       </div>
      )
   }
