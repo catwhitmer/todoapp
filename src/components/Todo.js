@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 //import Toggle from './Toggle'
 //import Like from './Like'
 
@@ -7,9 +6,9 @@ import React, { Component } from 'react'
 class Todo extends Component {
   
   state = {
-    done: false,
+    done: false
   }
-  
+
   handleClick = () => {
     this.setState({done: !this.state.done })
   }
@@ -17,7 +16,7 @@ class Todo extends Component {
   render() {
      return (
       <div>
-        <p onClick ={this.handleClick}  className={this.state.done ? "done" : null}> {this.state.data} </p>      
+        <p onClick ={this.handleClick}  className={this.state.done ? "done" : null}></p>  
       </div>
      )
   }

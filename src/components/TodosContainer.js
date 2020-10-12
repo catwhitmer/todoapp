@@ -26,10 +26,9 @@ class TodosContainer extends Component {
       <div>
         {this.state.data.map((todo) => {
           return(
-            <div className='Todos-Container' key={todo.id} >
-              <Todo todos={this.state.data}/>
+            <div className='Todos-Container' key={todo.id}>
               <p> {todo.notes} </p>
-            </div>       
+            </div>      
           )
         })}
         <CreateTodo />
