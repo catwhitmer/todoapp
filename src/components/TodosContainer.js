@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todo from './Todo';
+//import Toggle from './Toggle'
 import CreateTodo from './CreateTodo';
 import axios from 'axios';
 
@@ -26,8 +27,8 @@ class TodosContainer extends Component {
       <div>
         {this.state.data.map((todo) => {
           return(
-            <div className='Todos-Container' key={todo.id}>
-              <p> {todo.notes} </p>
+            <div className='Todos-Container' key={todo.id} >
+              <Todo todo={todo.notes} />
             </div>      
           )
         })}
