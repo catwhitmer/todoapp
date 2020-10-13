@@ -13,7 +13,7 @@ class Toggle extends React.Component {
     render() {
         return (
             <div>
-                <button onClick ={this.handleClick}> {this.state.toggleOn ? "TODO" : 'DONE'} </button>
+                <button className={'toggleButton'} onClick ={this.handleClick}> {this.state.toggleOn ? "NEED TO DO" : 'DONE'} </button>
             </div>
         )
     }
