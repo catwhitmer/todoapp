@@ -32,3 +32,8 @@
 .done {
   text-decoration: line-through
 }
+
+.toggleButton {
+  color: bisque;
+  background-color: lightslategray;
+}
