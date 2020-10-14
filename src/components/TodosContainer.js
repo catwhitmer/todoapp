@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Todo from './Todo';
-//import Toggle from './Toggle'
 import CreateTodo from './CreateTodo';
 import axios from 'axios';
 
@@ -32,7 +31,8 @@ class TodosContainer extends Component {
             </div>      
           )
         })}
-        <CreateTodo />
+        <button className='createTodo' onClick={this.createTodo}>New To Do</button>
+        <CreateTodo todo={this.state.data}/>
       </div>
     )
   }
