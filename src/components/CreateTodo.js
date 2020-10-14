@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React from 'react'
 
 class CreateTodo extends React.Component {
@@ -7,7 +8,18 @@ class CreateTodo extends React.Component {
   }
 
   createTodo = () => {
-    
+    axios.post(
+      'http://localhost:3001/api/v1/todos',
+      {  todo:
+        {
+          notes: ''
+        }
+      }
+    )
+    .then(resp => {
+      console.log(resp)
+    })
+    .catch(error => console.log(error))
   }
 
   handleChange = (event) => {
