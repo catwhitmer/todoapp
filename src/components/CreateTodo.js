@@ -36,7 +36,7 @@ class CreateTodo extends React.Component {
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className={'CreateTodo'} onSubmit={this.handleSubmit}>
           <label>Add Todo</label>
           <input type="text" name='todo' value={this.state.todo} onChange={this.handleChange} />
           <input type="submit" />

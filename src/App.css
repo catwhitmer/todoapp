@@ -16,7 +16,7 @@
   height: 150px;
   width: 150px;
   margin: 30px;
-  margin-top: 100px;
+  margin-top: 200px;
   background: rgb(228, 228, 111);
   float: left;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -34,15 +34,12 @@
   background-color: lightslategray;
 }
 
-.createTodo {
+.CreateTodo {
   background: rgb(108, 92, 117);
   color: rgb(29, 28, 28);
   border: none;
   font-size: 24px;
   cursor: pointer;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-top: 20px;
   padding:10px;
   float: left;
 }
