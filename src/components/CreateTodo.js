@@ -8,10 +8,8 @@ class CreateTodo extends React.Component {
   }
 
   createTodo = () => {
-    axios.post(
-      'http://localhost:3001/api/v1/todos',
-      {  todo:
-        {
+    axios.post('http://localhost:3001/api/v1/todos', {  
+        todo: {
           notes: ''
         }
       }
