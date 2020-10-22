@@ -4,39 +4,35 @@ import React from 'react'
 class CreateTodo extends React.Component {
 
   state = {
-    todo: ""
+    notes: ""
   }
 
-  createTodo = () => {
-    axios.post('http://localhost:3001/api/v1/todos', {  
-        todo: {
-          notes: ''
-        }
-      }
-    )
-    .then(resp => {
+  handleChange = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const todo = {
+      notes: this.state.notes
+    }
+     
+    axios
+      .post('http://localhost:3001/api/v1/todos', todo)
+      .then(resp => {
       console.log(resp)
+      console.log(resp.data)
     })
-    .catch(error => console.log(error))
-  }
-
-  handleChange = (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault()
-    this.props.createTodo(this.state)
+      .catch(error => console.log(error))
   }
 
   render() {
     return(
       <div>
-        <form className={'CreateTodo'} onSubmit={this.handleSubmit}>
+        <form className={'CreateTodo'} onSubmit={e => this.handleSubmit(e)}>
           <label>Add Todo</label>
-          <input type="text" name='todo' value={this.state.todo} onChange={this.handleChange} />
+          <input type="text" name='notes' value={this.state.notes} onChange={this.handleChange} />
           <input type="submit" />
         </form>
       </div>
