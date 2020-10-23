@@ -12,11 +12,11 @@
 }
 
 .Todos-Container {
-  padding: 20px;
+  padding: 30px;
   height: 150px;
   width: 150px;
-  margin: 30px;
-  margin-top: 200px;
+  margin: 50px;
+  margin-left: 110px;
   background: rgb(228, 228, 111);
   float: left;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -35,11 +35,12 @@
 }
 
 .CreateTodo {
-  background: rgb(108, 92, 117);
-  color: rgb(29, 28, 28);
+  background: black;
+  color: antiquewhite;
   border: none;
   font-size: 24px;
   cursor: pointer;
-  padding:10px;
-  float: left;
+  padding: 20px;
+  align-items: center;
+  
 }
