@@ -23,6 +23,9 @@ class CreateTodo extends React.Component {
       .then(resp => {
       console.log(resp)
       console.log(resp.data)
+      this.setState({
+            notes: ''
+        })
     })
       .catch(error => console.log(error))
   }
