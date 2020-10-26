@@ -4,7 +4,7 @@ import React from 'react'
 class CreateTodo extends React.Component {
 
   state = {
-    notes: ""
+    notes: ''
   }
 
   handleChange = event => {
@@ -23,6 +23,7 @@ class CreateTodo extends React.Component {
       .then(resp => {
       console.log(resp)
       console.log(resp.data)
+      window.location = "/todos" 
       this.setState({
             notes: ''
         })
