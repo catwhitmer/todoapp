@@ -1,15 +1,17 @@
-import axios from 'axios'
-import React from 'react'
+import axios from 'axios';
+import React from 'react';
 
 class EditTodo extends React.Component {
 
-    render() {
-        return (
-            <div>
-            
-            </div>
-        )
-    }
+ 
+
+  render() {
+    return(
+      <div>
+        
+      </div>
+    )
+  }
 }
 
-export default EditTodo
+export default EditTodo;
