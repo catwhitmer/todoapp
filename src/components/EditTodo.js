@@ -8,7 +8,7 @@ class EditTodo extends React.Component {
   render() {
     return(
       <div>
-        <button>Edit</button>       
+        <button className={'EditButton'}>Edit</button>       
       </div>
     )
   }
