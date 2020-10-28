@@ -14,7 +14,7 @@ class Todo extends Component {
   render() {
      return (
       <div>
-        <p onClick ={this.handleClick}  className={this.state.done ? "done" : null}> {this.props.todo}</p>  
+        <h4 onClick ={this.handleClick}  className={this.state.done ? "done" : null}> {this.props.todo}</h4>  
       </div>
      )
   }
