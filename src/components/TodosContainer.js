@@ -30,7 +30,7 @@ class TodosContainer extends Component {
           return(
             <div className='Todos-Container' key={todo.id} >
               <Todo todo={todo.notes} />
-              <EditTodo />
+              <EditTodo todo={todo.notes}/>
             </div>      
           )
         })}    
