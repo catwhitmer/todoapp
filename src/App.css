@@ -45,6 +45,16 @@
   
 }
 
+.SubmitButton {
+  background-color: aqua;
+  padding: 6px;
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  font-size: medium;
+}
+
+
 .EditButton {
   background-color: aqua;
   padding: 6px;
